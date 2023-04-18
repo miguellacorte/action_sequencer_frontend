@@ -13,7 +13,7 @@ function App() {
   let usersWithCompositions = [];
   useEffect(() => {
     axios
-      .get("/api/projects")
+      .get("https://actionsequencerapi.onrender.com/api/projects")
       .then((response) => {
         console.log("response.data", response.data);
         setUsers(response.data);
