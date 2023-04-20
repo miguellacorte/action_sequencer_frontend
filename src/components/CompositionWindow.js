@@ -71,7 +71,6 @@ export default function Composition({
 
     function checkNote() {
       if (mouseX >= 0 && mouseY >= 0 && mouseX < width && mouseY < height) {
-        console.log("u are right");
         if (
           mouseX <= width / 4 &&
           mouseY <= height / 4 &&

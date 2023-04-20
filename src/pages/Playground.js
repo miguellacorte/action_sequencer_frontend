@@ -29,13 +29,7 @@ export default function Playground() {
           />
         )}
 
-        {saveComposition && (
-          <LoginSave
-            userNotes={userNotes}
-            userDrawingX={userDrawingX}
-            userDrawingY={userDrawingY}
-          />
-        )}
+        
       </div>
 
       <div>
