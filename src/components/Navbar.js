@@ -9,13 +9,13 @@ export default function NavBar() {
     <div className="menu-container">
       <button onClick={onClick} className="menu-trigger">
         <span>☰</span>
-        
       </button>
       <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
         <ul>
-        <li><a href="/">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/participationHistory">Participation History</a></li>
           <li><a href="/playground">Playground</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </nav>
     </div>

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../styles/SignupAndSave.css"
 
 export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY }) {
   const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
   const [location, setLocation] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -16,20 +15,18 @@ export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY })
   const handleSubmit = (e) => {
     e.preventDefault();
     const requestBody = {
-      // email,
-      // password,
       username,
       location,
-	  compositions: [
-		{
-		  notes: userNotes,
-		  drawingX: userDrawingX,
-		  drawingY: userDrawingY
-		}
-	  ]
+      compositions: [
+        {
+          notes: userNotes,
+          drawingX: userDrawingX,
+          drawingY: userDrawingY
+        }
+      ]
     };
     axios
-      .post("/api/auth/signupandsave", requestBody)
+      .post("https://actionsequencerapi.onrender.com/api/auth/signupandsave", requestBody)
       .then((response) => {
         navigate("/participationHistory");
       })
@@ -39,33 +36,35 @@ export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY })
       });
   };
 
-  // const handleEmail = (e) => setEmail(e.target.value);
   const handleUsername = (e) => setUsername(e.target.value);
-  // const handlePassword = (e) => setPassword(e.target.value);
   const handleLocation = (e) => setLocation(e.target.value);
 
   return (
-    <>
-      <h1>Signup</h1>
+    <div className="signup-form">
+      <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
-        {/* <label htmlFor="email">Email: </label>
-        <input type="text" value={email} onChange={handleEmail} /> */}
+        <label htmlFor="username">Name:</label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={handleUsername}
+          required
+        />
 
-        {/* <label htmlFor="password">Password: </label>
-        <input type="password" value={password} onChange={handlePassword} /> */}
-
-        <label htmlFor="username">Name: </label>
-        <input type="text" value={username} onChange={handleUsername} />
-
-        <label htmlFor="location">location: </label>
-        <input type="text" value={location} onChange={handleLocation} />
+        <label htmlFor="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          value={location}
+          onChange={handleLocation}
+          required
+        />
 
         <button type="submit">Sign Up & Save Composition</button>
       </form>
 
       {errorMessage && <h5>{errorMessage}</h5>}
-
-      
-    </>
+    </div>
   );
 }

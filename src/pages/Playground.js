@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import CompositionWindow from "../components/CompositionWindow";
 import { useParams, Link } from "react-router-dom";
-import Popup from "reactjs-popup";
-import LoginSave from "../components/LoginSave";
 import Draggable from "react-draggable";
 import "../styles/box.css";
 import SignupAndSave from "../components/SignupAndSave";
