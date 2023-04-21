@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
-import { Routes, Route } from "react-router-dom"; // <== IMPORT
+import { Routes, Route } from "react-router-dom"; 
 import Home from "./pages/Home";
 import ParticipationHistory from "./pages/ParticipationHistory";
 import ParticipationRecall from "./pages/ParticipationRecall";
@@ -13,14 +13,14 @@ function App() {
   const [users, setUsers] = useState([]);
   let usersWithCompositions = [];
   useEffect(() => {
-    axios
-      .get("https://actionsequencerapi.onrender.com/")
+    axios.get("https://actionsequencerapi.onrender.com/api/projects", { withCredentials: true })
       .then((response) => {
         console.log("response.data", response.data);
         setUsers(response.data);
       })
       .catch((err) => console.log(err));
   }, []);
+  
 
  
   for (let i = 0; i < users.length; i++) {
