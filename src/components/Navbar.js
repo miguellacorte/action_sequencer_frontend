@@ -1,5 +1,6 @@
-import React, {useState, useRef} from 'react'
-import "../styles/Navbar.css"
+import React, { useState, useRef } from "react";
+import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const dropdownRef = useRef(null);
@@ -10,21 +11,28 @@ export default function NavBar() {
       <button onClick={onClick} className="menu-trigger">
         <span>☰</span>
       </button>
-      <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+      <nav
+        ref={dropdownRef}
+        className={`menu ${isActive ? "active" : "inactive"}`}
+      >
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/participationHistory">Participation History</a></li>
-          <li><a href="/playground">Playground</a></li>
-          <li><a href="/about">About</a></li>
+          <li>
+            {" "}
+            <Link to="/"> Home</Link>
+          </li>
+          <li>
+            <Link to="/participationHistory"> Participation History </Link>{" "}
+          </li>
+          <li>
+            {" "}
+            <Link to="/playground"> Playground</Link>{" "}
+          </li>
+          <li>
+            {" "}
+            <Link to="/about"> About</Link>{" "}
+          </li>
         </ul>
       </nav>
     </div>
-  )
+  );
 }
-
-
-
-
-
-
-

@@ -5,7 +5,6 @@ import "../styles/ParticipationList.css";
 export default function ParticipationHistoryList({ usersWithCompositions }) {
 
   if (usersWithCompositions !== undefined) {
-   
 
     return (
       <div>
