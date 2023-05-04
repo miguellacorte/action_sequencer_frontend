@@ -1,6 +1,6 @@
 .menu-container {
   position: absolute;
-  top: 2rem; 
+  top: 2rem;
   right: 2rem;
 }
 
@@ -43,12 +43,13 @@
   display: block;
 }
 
-
 @media (max-width: 768px) {
   .menu-container {
-    left: 0;
+    position: fixed;
+    top: 0;
     right: 0;
-    text-align: center;
+    left: 0;
+    padding: 15px;
   }
 
   .menu {
@@ -67,4 +68,3 @@
     padding: 10px 20px;
   }
 }
-

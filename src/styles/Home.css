@@ -1,0 +1,97 @@
+.boxParticipationList {
+    position: fixed;
+    top: 20%;
+    right: 50px;
+    width: 262px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .compositionRecallHome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65.5vw;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .compositionRecallHome fieldset {
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 0;
+  }
+  
+  .saveCompositionBtnHome button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+
+
+  @media only screen and (max-width: 767px) {
+    /* Style for mobile devices */
+  
+    .boxParticipationList {
+      position: fixed;
+      top: 80px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 90%;
+      z-index: 1000;
+      background-color: white;
+      border: 1px solid black;
+      padding: 5px;
+    }
+  
+    .compositionRecallHome {
+      margin-top: 120px;
+      margin-bottom: 60px;
+    }
+  
+    .compositionRecallHome fieldset {
+      width: 90%;
+    }
+  
+    .saveCompositionBtnHome button {
+      font-size: 12px;
+      padding: 5px;
+    }
+  
+    .mobilePopup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+  
+    .mobilePopupText {
+      font-size: 16px;
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid black;
+      max-width: 90%;
+    }
+  }
+  
