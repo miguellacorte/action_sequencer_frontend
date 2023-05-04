@@ -1,3 +1,63 @@
+.boxParticipationList {
+    position: fixed;
+    top: 20%;
+    right: 50px;
+    width: 262px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .compositionRecallHome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65.5vw;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .compositionRecallHome fieldset {
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 0;
+  }
+  
+  .saveCompositionBtnHome button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+
+  .popup-message {
+    font-size: 14px;
+    text-align: center;
+  }
+
 
 
   @media only screen and (max-width: 767px) {
