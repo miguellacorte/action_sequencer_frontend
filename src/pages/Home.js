@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SmallParticipationList from "../components/SmallParticipationList";
 import { Link } from "react-router-dom";
 import Draggable from "react-draggable";
@@ -7,7 +7,17 @@ import CompositionRecall from "../components/CompositionRecall";
 import "../styles/Home.css";
 
 export default function Home({ usersWithCompositions }) {
-  const [showPopup, setShowPopup] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   console.log(usersWithCompositions);
   if (usersWithCompositions.length !== 0) {
@@ -19,12 +29,13 @@ export default function Home({ usersWithCompositions }) {
 
     return (
       <div>
-        {showPopup && (
-          <div className="popup">
-            <div className="popup-message">
-              This page has been optimized for desktop. Please visit us on your
-              computer for the best experience.
-              <button onClick={() => setShowPopup(false)}>Close</button>
+        {isMobile && (
+          <div className="mobilePopup">
+            <div className="mobilePopupText">
+              <p>
+                This website has been optimized for desktop. Please visit us on
+                a computer for the best experience.
+              </p>
             </div>
           </div>
         )}
@@ -104,5 +115,5 @@ export default function Home({ usersWithCompositions }) {
     );
   } else {
     return <div>Loading...</div>;
-}
+  }
 }
