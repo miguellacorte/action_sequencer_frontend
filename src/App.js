@@ -14,8 +14,8 @@ function App() {
   let usersWithCompositions = [];
   useEffect(() => {
     axios
-      .get("api/projects")
-      // https://actionsequencerapi.onrender.com/api/projects", { withCredentials: true }
+    // if running locally change .get link to (api/projects)
+      .get("https://actionsequencerapi.onrender.com/api/projects", { withCredentials: true } )
       .then((response) => {
         console.log("response.data", response.data);
         setUsers(response.data);
