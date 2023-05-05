@@ -8,6 +8,7 @@ import "../styles/Home.css";
 
 export default function Home({ usersWithCompositions }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [showMobilePopup, setShowMobilePopup] = useState(true);
 
   useEffect(() => {
     function handleResize() {
@@ -29,13 +30,14 @@ export default function Home({ usersWithCompositions }) {
 
     return (
       <div>
-        {isMobile && (
+        {isMobile && showMobilePopup && (
           <div className="mobilePopup">
             <div className="mobilePopupText">
               <p>
                 This website has been optimized for desktop. Please visit us on
                 a computer for the best experience.
               </p>
+              <button onClick={() => setShowMobilePopup(false)}>Close</button>
             </div>
           </div>
         )}
