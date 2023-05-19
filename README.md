@@ -3,8 +3,8 @@
 
 The Action Sequencer Frontend is the web-based frontend component of the Action Sequencer, a music sequencer that allows users to create and play back music sequences using a visual interface based on inspired by John Cage’s 1958 concert for piano and orchestra score. 
 
-This repository contains the source code and documentation for the frontend component of the Action Sequencer. You can find the backend here: 
-https://github.com/miguellacorte/action_Sequencer_backend
+This repository contains the source code and documentation for the frontend component of the Action Sequencer. You can find the backend [here:](https://github.com/miguellacorte/action_Sequencer_backend) 
+
 
 ## Table of Contents
 
