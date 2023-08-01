@@ -16,10 +16,11 @@ export default function About() {
         alt="cage"
       />
       <p className="image-text">
-          Score page from Concert for Piano and Orchestra (1958) by John Cage, Edition Peters 6705
-          © CF PETERS Musikverlag Frankfurt Leipzig London New York
-        </p>
-      <h3>Technical framework</h3>
+        Score page from Concert for Piano and Orchestra (1958) by John Cage,
+        Edition Peters 6705 © CF PETERS Musikverlag Frankfurt Leipzig London New
+        York
+      </p>
+      <h3>How does it work?</h3>
       <p className="about-paragraph">
         The project is built using{" "}
         <a
@@ -96,23 +97,24 @@ export default function About() {
         .
         <br />
         <br />
-        Behind the scenes, p5.js is used to create the grid and handle the user
-        interactions with the interface.{" "}
-        <a
-          href="https://tonejs.github.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tone.js
-        </a>{" "}
-        is used to synthesize the sound samples, as well as to handle the
-        sequencing of the composition. The backend server is responsible for
-        storing and serving the saved compositions.
+        Tone.js is used for audio synthesis and timing; it creates a
+        synthesizer, applies effects such as reverb and chorus, and controls the
+        tempo and timing of notes. Here, the sound is triggered depending on
+        where you click on a canvas created by p5.js. p5.js is used for creating
+        an interactive canvas where you can draw by dragging the mouse.
+        <br />
+        Depending on where you click on the canvas, different notes will play;
+        the canvas is divided into different regions with each region mapped to
+        a different note. The application stores the notes that are played and
+        the x and y coordinates of where the user has clicked on the canvas in
+        arrays, which can be saved by pressing a 'Save Composition' button. This
+        way, it allows you to compose and save a piece of music while also
+        drawing on the canvas.
       </p>
       <h3>Licensing and references</h3>
       <p className="about-paragraph">
-      This project has been entirely coded and designed by Miguel La Corte. 
-      <br />
+        This project has been entirely coded and designed by Miguel La Corte.
+        <br />
         This project is licensed under the{" "}
         <a
           href="https://opensource.org/licenses/MIT"

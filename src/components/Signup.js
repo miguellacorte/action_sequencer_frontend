@@ -52,7 +52,7 @@ export default function Signup() {
         <label htmlFor="location">location: </label>
         <input type="text" value={location} onChange={handleLocation} />
 
-        <button type="submit">Sign Up </button>
+        <button type="submit">Submit composition </button>
       </form>
 
       {errorMessage && <h5>{errorMessage}</h5>}
