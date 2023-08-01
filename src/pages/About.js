@@ -103,6 +103,7 @@ export default function About() {
         where you click on a canvas created by p5.js. p5.js is used for creating
         an interactive canvas where you can draw by dragging the mouse.
         <br />
+        <br />
         Depending on where you click on the canvas, different notes will play;
         the canvas is divided into different regions with each region mapped to
         a different note. The application stores the notes that are played and

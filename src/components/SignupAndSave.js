@@ -41,7 +41,7 @@ export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY })
 
   return (
     <div className="signup-form">
-      <h1>Sign up</h1>
+      <h1>Submit</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Name:</label>
         <input
