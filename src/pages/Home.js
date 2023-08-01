@@ -60,7 +60,7 @@ export default function Home({ usersWithCompositions }) {
                 width: "262px",
               }}
             >
-              Participation history List
+              Recent Participations
             </fieldset>
             <SmallParticipationList
               usersWithCompositions={usersWithCompositions}
