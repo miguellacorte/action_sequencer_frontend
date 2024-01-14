@@ -1,7 +1,7 @@
 import React from "react";
 import ParticipationHistoryList from "../components/ParticipationHistoryList";
 import Draggable from "react-draggable";
-import "../styles/ParticipationHistory.css";
+
 
 export default function ParticipationHistory({ usersWithCompositions }) {
   if (usersWithCompositions !== undefined) {
