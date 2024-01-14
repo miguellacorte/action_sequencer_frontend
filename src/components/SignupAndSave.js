@@ -29,6 +29,7 @@ export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY })
       .post("https://actionsequencerapi.onrender.com/api/auth/signupandsave", requestBody)
       .then((response) => {
         navigate("/participationHistory");
+        window.location.reload();
       })
       .catch((err) => {
         const errorDescription = err.response.data.message;
@@ -61,7 +62,7 @@ export default function SignupAndSave({ userNotes, userDrawingX, userDrawingY })
           required
         />
 
-        <button type="submit">Sign Up & Save Composition</button>
+        <button type="submit">Submit Composition</button>
       </form>
 
       {errorMessage && <h5>{errorMessage}</h5>}
