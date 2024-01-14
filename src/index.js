@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {HashRouter } from "react-router-dom";
 import {AuthProviderWrapper} from './context/auth'
   
 ReactDOM.render(
-  <Router>     
-  <AuthProviderWrapper>              
-    <App />
+  <HashRouter>     
+    <AuthProviderWrapper>              
+      <App />
     </AuthProviderWrapper> 
-  </Router>,                        
+  </HashRouter>,                        
   document.getElementById("root")
 );
 
