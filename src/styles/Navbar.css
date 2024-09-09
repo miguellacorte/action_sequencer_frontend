@@ -1,78 +1,74 @@
-.menu-container {
-  z-index: 100000000;
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-navbar svg {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 450px;
+}
+
+.custom-navbar circle,
+.custom-navbar text {
+  cursor: pointer;
+}
+
+.nav-text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.nav-text.bottom {
+  transform: translateY(5px);
+}
+
+.nav-text.top {
+  transform: translateY(-5px);
+}
+
+.play-controls {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.menu {
-  z-index: 100000000;
-  background: #ffffff;
-  border-radius: 8px;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 300px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-  
+.play-controls button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #000;
 }
 
-.menu.active {
-  z-index: 100000000;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  z-index: 2;
-}
-
-.menu ul {
-  z-index: 100000000;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu li {
-  border-bottom: 1px solid #dddddd;
-}
-
-.menu li a {
-  
-  text-decoration: none;
-  color: #333333;
-  padding: 15px 20px;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .menu-container {
-    z-index: 100000000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 15px;
-  }
-
-  .menu {
-    z-index: 100000000;
-    width: 100%;
-    top: 50px;
-    right: auto;
-    left: -100%;
-    transform: none;
-  }
-
-  .menu.active {
-    
-    left: 0;
-  }
-
-  .menu li a {
-    padding: 10px 20px;
+@media (max-width: 600px) {
+  .nav-text {
+    font-size: 12px;
   }
 }

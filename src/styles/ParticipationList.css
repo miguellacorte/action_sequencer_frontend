@@ -28,3 +28,122 @@
   border-style: solid;
   border-width: 1px;
 }
+
+@media screen and (min-width: 768px) {
+  .participation-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .list, .biglist {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.participation-history {
+  padding: 20px;
+}
+
+.participation-history h1 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-family: monospace;
+}
+
+.participation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navbar-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.participation-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.participation-item {
+  flex: 0 0 calc(50% - 7.5px);
+  max-width: calc(50% - 7.5px);
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.participation-item-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.participation-item-location,
+.participation-item-time {
+  font-size: 12px;
+  color: #666;
+}
+
+@media screen and (max-width: 1200px) {
+  .participation-item {
+    flex: 0 0 calc(25% ); /* 4 items per row */
+    max-width: calc(25% - 15px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .participation-item {
+    flex: 0 0 calc(33.33% - 15px); /* 3 items per row */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .participation-item {
+    flex: 0 0 calc(50% - 15px); /* 2 items per row */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .participation-history h1 {
+    font-size: 20px;
+  }
+
+  .navbar-button {
+    font-size: 20px;
+  }
+
+  .participation-item {
+    padding: 10px;
+    flex: 0 0 calc(50% - 7.5px);
+    max-width: calc(50% - 7.5px);
+    min-width: 0;
+  }
+  
+  .participation-item-name {
+    font-size: 12px;
+  }
+  
+  .participation-item-location,
+  .participation-item-time {
+    font-size: 10px;
+  }
+  
+  .participation-list-container {
+    gap: 10px;
+  }
+}

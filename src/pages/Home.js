@@ -20,7 +20,7 @@ export default function Home({ usersWithCompositions }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(usersWithCompositions);
+  // console.log(usersWithCompositions);
   if (usersWithCompositions.length !== 0) {
     let totalUsers = usersWithCompositions.length;
     let lastUser = usersWithCompositions[totalUsers - 1];
@@ -57,7 +57,7 @@ export default function Home({ usersWithCompositions }) {
                 borderStyle: "solid",
                 borderWidth: "1px",
                 padding: "3px",
-                width: "262px",
+                width: "93.5%",
               }}
             >
               Recent Participations
@@ -88,7 +88,6 @@ export default function Home({ usersWithCompositions }) {
                 style={{
                   fontSize: "13px",
                   position: "relative",
-                  left: "-2px",
                   color: "white",
                   backgroundColor: "black",
                   borderColor: "black",
@@ -96,7 +95,7 @@ export default function Home({ usersWithCompositions }) {
                   borderStyle: "solid",
                   borderWidth: "1px",
                   padding: "3px",
-                  width: "65.5vw",
+                  width: "99.3%",
                 }}
               >
                 Last user participation:

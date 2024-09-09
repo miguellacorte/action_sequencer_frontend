@@ -23,12 +23,12 @@ export default function Composition({
   let height = 500;
 
   let setup = (p5, canvasParentRef) => {
-    console.log(canvasParentRef);
+    // console.log(canvasParentRef);
     let canvas = p5.createCanvas(width, height).parent(canvasParentRef);
 
-    canvas.mousePressed((event) => {
-      console.log("Clicked on the canvas. Event:", event);
-    });
+    // canvas.mousePressed((event) => {
+    //   console.log("Clicked on the canvas. Event:", event);
+    // });
   };
 
   let synth = new Tone.Synth({

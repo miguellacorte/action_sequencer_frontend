@@ -7,19 +7,20 @@ export default function ParticipationHistoryList({ usersWithCompositions }) {
     return <div>No participation history found.</div>;
   }
 
+  // Sort usersWithCompositions by createdAt in descending order
+  const sortedUsers = usersWithCompositions.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
   return (
-    <div>
-      {usersWithCompositions.map((user) => {
-        return (
-          <div key={user._id} className="biglist participation-list-item">
-            <Link to={`/participationHistory/${user._id}`}>
-              <div className="participation-list-item-name">{user.username}</div>
-            </Link>
-            <div className="participation-list-item-location">{user.location}</div>
-            <div className="participation-list-item-time">{user.createdAt}</div>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      {sortedUsers.map((user) => (
+        <div key={user._id} className="participation-item">
+          <Link to={`/participationHistory/${user._id}`}>
+            <div className="participation-item-name">{user.username}</div>
+          </Link>
+          <div className="participation-item-location">{user.location}</div>
+          <div className="participation-item-time">{user.createdAt}</div>
+        </div>
+      ))}
+    </>
   );
 }
