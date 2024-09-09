@@ -16,7 +16,7 @@ function App() {
     axios
     // if running locally change .get link to (api/projects)
     // before deploying change .get link to ("https://actionsequencerapi.onrender.com/api/projects")
-      .get("/api/projects", { withCredentials: true } )
+      .get("https://actionsequencerapi.onrender.com/api/projects", { withCredentials: true } )
       .then((response) => {
         console.log("response.data", response.data);
         setUsers(response.data);
